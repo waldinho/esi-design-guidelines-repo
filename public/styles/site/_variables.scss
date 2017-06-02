@@ -1,3 +1,146 @@
 // Override Bootstrap variables in this file, e.g.
-
+// COLOURS
+$gray-base: #000 !default;
+$gray-darker: lighten($gray-base, 13.5%) !default; // #222
+$gray-dark: lighten($gray-base, 20%) !default; // #333
+$gray: lighten($gray-base, 33.5%) !default; // #555
+$gray-light: lighten($gray-base, 46.7%) !default; // #777
+$gray-lighter: lighten($gray-base, 93.5%) !default; // #eee
+$brand-primary: darken(#333, 6.5%) !default; // #337ab7
+$brand-success: #5cb85c !default;
+$brand-info: #5bc0de !default;
+$brand-warning: #f0ad4e !default;
+$brand-danger: #d9534f !default;
+@import url('https://fonts.googleapis.com/css?family=Roboto');
 $font-size-base: 14px;
+body {
+    background: #fff;
+    font-family: 'Roboto', sans-serif;
+    height: 100%;
+    width: 100%
+}
+
+.container .jumbotron,
+.container-fluid .jumbotron {
+    border-radius: 0px;
+    text-align: center;
+    position: relative;
+    height: 80vh;
+}
+
+.centered-stuff {
+    margin: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-right: -50%;
+    transform: translate(-50%, -50%)
+}
+
+.jumbotron {
+    border-radius: 0px;
+    background: #fff;
+    color: #333;
+}
+
+.navbar {
+    border-radius: 0px;
+    margin-bottom: 0px;
+}
+
+.container-fluid {
+    padding-left: 0px;
+    padding-right: 0px;
+}
+
+.navbar-default .navbar-nav>li>a {
+    color: #999;
+}
+
+.navbar-default .navbar-nav>li>a:hover,
+.navbar-default .navbar-nav>li>a:focus {
+    color: #fff;
+    background-color: transparent;
+    -webkit-transition: all 0.5s ease;
+    transition: all 0.5s ease;
+}
+
+.navbar-collapse {
+    padding-left: 0px;
+}
+
+.navbar-nav>li>a {
+    padding: 30px;
+}
+
+.navbar-nav>li {
+    background: #333;
+}
+
+.navbar-default {
+    background-color: #fff;
+    border-color: #fff;
+}
+
+.container {
+    margin-right: auto;
+    margin-left: auto;
+    padding-left: 0px;
+    padding-right: 0px;
+}
+
+.container-inner {
+    margin-right: auto;
+    margin-left: auto;
+    padding: 40px 0 0 60px;
+}
+
+.btn-lg,
+.btn-group-lg>.btn {
+    padding: 30px;
+    font-size: 14px;
+    line-height: 1.33333;
+    border-radius: 0px;
+}
+
+.btn-primary {
+    color: #fff;
+    background-color: #333;
+    border: 2px solid #333;
+}
+
+.btn-primary:hover {
+    color: #555;
+    background-color: #e7e7e7;
+    border: 2px solid #333;
+    -webkit-transition: all 0.4s ease;
+    transition: all 0.4s ease;
+}
+
+.list-group-item:last-child {
+    margin-bottom: 0;
+    border-radius: 0px;
+}
+
+.list-group-item:first-child {
+    margin-bottom: 0;
+    border-radius: 0px;
+}
+
+@media (min-width: 768px) {
+    .container {
+        width: 100%;
+    }
+}
+
+@media (min-width: 992px) {
+    .container {
+        width: 100%;
+    }
+}
+
+@media (min-width: 1200px) {
+    .container {
+        width: 100%;
+    }
+}
