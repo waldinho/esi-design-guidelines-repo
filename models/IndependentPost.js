@@ -21,7 +21,7 @@ IndependentPost.add({
         brief: { type: Types.Html, wysiwyg: true, height: 150 },
         extended: { type: Types.Html, wysiwyg: true, height: 400 },
     },
-    // categories: { type: Types.Relationship, ref: 'IndependentPostCategory', many: true },
+    categories: { type: Types.Relationship, ref: 'IndependentPostCategory', many: true },
 });
 
 IndependentPost.schema.virtual('content.full').get(function() {

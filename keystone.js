@@ -55,9 +55,9 @@ keystone.set('routes', require('./routes'));
 
 // Configure the navigation bar in Keystone's Admin UI
 keystone.set('nav', {
-    Independent: ['independent-posts', 'post-categories'],
-    Standard: ['standard-posts', 'post-categories'],
-    Indy100: ['indy-posts', 'post-categories'],
+    Independent: ['independent-posts', 'independent-post-categories'],
+    Standard: ['standard-posts', 'standard-post-categories'],
+    Indy100: ['indy-posts', 'indy-post-categories'],
     // posts: ['posts', 'post-categories'],
     // galleries: 'galleries',
     // enquiries: 'enquiries',

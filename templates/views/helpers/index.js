@@ -206,6 +206,22 @@ module.exports = function() {
         return ('/blog/' + categorySlug);
     };
 
+    // Direct url link to a specific indenpendent post
+    _helpers.independentPostUrl = function(independentPostSlug, options) {
+        return ('/independent/post/' + independentPostSlug);
+    };
+
+    // might be a ghost helper
+    // used for pagination urls on indenpendent
+    _helpers.independentPageUrl = function(independentPageNumber, options) {
+        return '/independent/?Page=' + independentpageNumber;
+    };
+
+    // create the category url for a independent-category page
+    _helpers.independentCategoryUrl = function(independentCategorySlug, options) {
+        return ('/independent/' + independentCategorySlug);
+    };
+
     // ### Pagination Helpers
     // These are helpers used in rendering a pagination system for content
     // Mostly generalized and with a small adjust to `_helper.pageUrl` could be universal for content types
