@@ -38,10 +38,11 @@ exports = module.exports = function(app) {
     app.get('/blog/:category?', routes.views.blog);
     app.get('/blog/post/:post', routes.views.post);
     app.get('/gallery', routes.views.gallery);
-    app.all('/contact', routes.views.contact);
+    app.get('/contact', routes.views.contact);
 
-    app.get('/:page', routes.views.page);
-    app.get('/independent', routes.views.independent);
+    // app.get('/:page', routes.views.page);
+    app.get('/independent', routes.views.independenthub);
+    app.get('/independent/:post', routes.views.independent);
     app.get('/standard', routes.views.standard);
     app.get('/indy100', routes.views.indy);
 
