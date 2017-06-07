@@ -213,8 +213,8 @@ module.exports = function() {
 
     // might be a ghost helper
     // used for pagination urls on indenpendent
-    _helpers.independentPageUrl = function(independentPageNumber, options) {
-        return '/independent/?Page=' + independentpageNumber;
+    _helpers.independentPageUrl = function(pageNumber, options) {
+        return '/independent/?Page=' + pageNumber;
     };
 
     // create the category url for a independent-category page
@@ -229,8 +229,8 @@ module.exports = function() {
 
     // might be a ghost helper
     // used for pagination urls on standard
-    _helpers.standardPageUrl = function(standardPageNumber, options) {
-        return '/standard/?Page=' + standardpageNumber;
+    _helpers.standardPageUrl = function(pageNumber, options) {
+        return '/standard/?Page=' + pageNumber;
     };
 
     // create the category url for a standard-category page
@@ -245,8 +245,8 @@ module.exports = function() {
 
     // might be a ghost helper
     // used for pagination urls on indy
-    _helpers.indyPageUrl = function(indyPageNumber, options) {
-        return '/indy/?Page=' + indypageNumber;
+    _helpers.indyPageUrl = function(pageNumber, options) {
+        return '/indy/?Page=' + pageNumber;
     };
 
     // create the category url for a indy-category page
@@ -317,6 +317,60 @@ module.exports = function() {
             nextPage = totalPages;
         }
         return _helpers.pageUrl(nextPage);
+    };
+
+    // special helper to ensure that we always have a valid page url set even if
+    // the link is disabled, will default to page 1
+    _helpers.independentPaginationPreviousUrl = function(previousPage, totalPages) {
+        if (previousPage === false) {
+            previousPage = 1;
+        }
+        return _helpers.independentPageUrl(previousPage);
+    };
+
+    // special helper to ensure that we always have a valid next page url set
+    // even if the link is disabled, will default to totalPages
+    _helpers.independentPaginationNextUrl = function(nextPage, totalPages) {
+        if (nextPage === false) {
+            nextPage = totalPages;
+        }
+        return _helpers.independentPageUrl(nextPage);
+    };
+
+    // special helper to ensure that we always have a valid page url set even if
+    // the link is disabled, will default to page 1
+    _helpers.standardPaginationPreviousUrl = function(previousPage, totalPages) {
+        if (previousPage === false) {
+            previousPage = 1;
+        }
+        return _helpers.standardPageUrl(previousPage);
+    };
+
+    // special helper to ensure that we always have a valid next page url set
+    // even if the link is disabled, will default to totalPages
+    _helpers.standardPaginationNextUrl = function(nextPage, totalPages) {
+        if (nextPage === false) {
+            nextPage = totalPages;
+        }
+        return _helpers.standardPageUrl(nextPage);
+    };
+
+    // special helper to ensure that we always have a valid page url set even if
+    // the link is disabled, will default to page 1
+    _helpers.indyPaginationPreviousUrl = function(previousPage, totalPages) {
+        if (previousPage === false) {
+            previousPage = 1;
+        }
+        return _helpers.indyPageUrl(previousPage);
+    };
+
+    // special helper to ensure that we always have a valid next page url set
+    // even if the link is disabled, will default to totalPages
+    _helpers.indyPaginationNextUrl = function(nextPage, totalPages) {
+        if (nextPage === false) {
+            nextPage = totalPages;
+        }
+        return _helpers.indyPageUrl(nextPage);
     };
 
 

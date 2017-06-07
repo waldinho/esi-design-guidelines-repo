@@ -20,12 +20,12 @@
 		</div>
 		<div class="col-sm-4 col-md-3">  
 			<div style="margin-top: 70px;" class="list-group">
-				<a href="/blog" class="active list-group-item">All</a>
+				<a href="/independent" class="active list-group-item">All</a>
 				{{# each data.categories }}
 				<a href="{{independentCategoryUrl key}}" class="false list-group-item">{{name}}</a>
 				{{/each}}
 			</div>
 		</div>
 	</div>
-	{{>pagination}}
+	{{>independentpagination}}
 </div>
