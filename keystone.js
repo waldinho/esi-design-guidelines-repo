@@ -11,8 +11,8 @@ var handlebars = require('express-handlebars');
 // and documentation.
 
 keystone.init({
-    'name': 'ESI-design-guidelines',
-    'brand': 'ESI-design-guidelines',
+    'name': 'ESI design guidelines',
+    'brand': 'ESI design guidelines',
 
     'sass': 'public',
     'static': 'public',

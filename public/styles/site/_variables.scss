@@ -25,15 +25,14 @@ body {
     border-radius: 0px;
     text-align: center;
     position: relative;
-    height: 80vh;
+    height: 84.5vh;
 }
 
 .centered-stuff {
     margin: 0;
-    position: absolute;
-    top: 50%;
+    position: relative;
+    top: 55%;
     left: 50%;
-    margin-right: -50%;
     transform: translate(-50%, -50%)
 }
 
