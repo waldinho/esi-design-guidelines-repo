@@ -222,6 +222,38 @@ module.exports = function() {
         return ('/independent/' + independentCategorySlug);
     };
 
+    // Direct url link to a specific standard post
+    _helpers.standardPostUrl = function(standardPostSlug, options) {
+        return ('/standard/post/' + standardPostSlug);
+    };
+
+    // might be a ghost helper
+    // used for pagination urls on standard
+    _helpers.standardPageUrl = function(standardPageNumber, options) {
+        return '/standard/?Page=' + standardpageNumber;
+    };
+
+    // create the category url for a standard-category page
+    _helpers.standardCategoryUrl = function(standardCategorySlug, options) {
+        return ('/standard/' + standardCategorySlug);
+    };
+
+    // Direct url link to a specific standard post
+    _helpers.indyPostUrl = function(indyPostSlug, options) {
+        return ('/indy/post/' + indyPostSlug);
+    };
+
+    // might be a ghost helper
+    // used for pagination urls on indy
+    _helpers.indyPageUrl = function(indyPageNumber, options) {
+        return '/indy/?Page=' + indypageNumber;
+    };
+
+    // create the category url for a indy-category page
+    _helpers.indyCategoryUrl = function(indyCategorySlug, options) {
+        return ('/indy/' + indyCategorySlug);
+    };
+
     // ### Pagination Helpers
     // These are helpers used in rendering a pagination system for content
     // Mostly generalized and with a small adjust to `_helper.pageUrl` could be universal for content types

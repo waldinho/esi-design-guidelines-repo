@@ -1,5 +1,5 @@
 <div class="container-inner">
-	<h1>Independent</h1>
+	<h1>Indy100</h1>
 </div>
 <div class="container-inner">
 	<div class="row">
@@ -7,13 +7,13 @@
 			<div class="blog">
 				{{# each data.posts.results}}
 				<div data-ks-editable="{{#if ../user}}{{adminEditableUrl ../../user _id}}{{/if}}" class="post underline">
-					<h2><a href="{{independentPostUrl slug}}">{{{title}}}</a></h2>
+					<h2><a href="{{indyPostUrl slug}}">{{{title}}}</a></h2>
 					{{!--<p class="lead text-muted">{{{categoryList categories prefix="Posted in "}}}
 							{{#if author.name.first}}by {{author.name.first}}{{/if}}
 					</p>--}}
 					{{#if image}}<img src="{{{cloudinaryUrl image width=160 height=160 crop='fit' }}}" class="img pull-right">{{/if}}
 					<p>{{{content.brief}}}</p>
-					{{#if content.extended}}<p class="read-more"><a href="{{independentPostUrl slug}}">MORE</a></p>{{/if}}
+					{{#if content.extended}}<p class="read-more"><a href="{{indyPostUrl slug}}">MORE</a></p>{{/if}}
 				</div>
 				{{/each}}
 			</div>
@@ -22,7 +22,7 @@
 			<div style="margin-top: 70px;" class="list-group">
 				<a href="/blog" class="active list-group-item">All</a>
 				{{# each data.categories }}
-				<a href="{{independentCategoryUrl key}}" class="false list-group-item">{{name}}</a>
+				<a href="{{indyCategoryUrl key}}" class="false list-group-item">{{name}}</a>
 				{{/each}}
 			</div>
 		</div>

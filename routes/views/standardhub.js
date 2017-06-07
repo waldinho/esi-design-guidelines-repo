@@ -7,7 +7,7 @@ exports = module.exports = function(req, res) {
     var locals = res.locals;
 
     // Init locals
-    locals.section = 'independenthub';
+    locals.section = 'standardhub';
     locals.filters = {
         category: req.params.category,
     };
@@ -19,7 +19,7 @@ exports = module.exports = function(req, res) {
     // Load all categories
     view.on('init', function(next) {
 
-        keystone.list('IndependentPostCategory').model.find().sort('name').exec(function(err, results) {
+        keystone.list('StandardPostCategory').model.find().sort('name').exec(function(err, results) {
 
             if (err || !results.length) {
                 return next(err);
@@ -45,7 +45,7 @@ exports = module.exports = function(req, res) {
     view.on('init', function(next) {
 
         if (req.params.category) {
-            keystone.list('IndependentPostCategory').model.findOne({ key: locals.filters.category }).exec(function(err, result) {
+            keystone.list('StandardPostCategory').model.findOne({ key: locals.filters.category }).exec(function(err, result) {
                 locals.data.category = result;
                 next(err);
             });
@@ -57,7 +57,7 @@ exports = module.exports = function(req, res) {
     // Load the posts
     view.on('init', function(next) {
 
-        var q = keystone.list('IndependentPost').paginate({
+        var q = keystone.list('StandardPost').paginate({
                 page: req.query.page || 1,
                 perPage: 10,
                 maxPages: 10,
@@ -79,5 +79,5 @@ exports = module.exports = function(req, res) {
     });
 
     // Render the view
-    view.render('independenthub');
+    view.render('standardhub');
 };

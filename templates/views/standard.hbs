@@ -2,18 +2,18 @@
 	<div class="row">
 		<div class="col-sm-10 col-sm-offset-1 col-md-8 col-md-offset-2">
 			<article>
-				<p><a href="/blog">&larr; back</a></p>
+				<p><a href="/standard">&larr; back</a></p>
 				<hr>
 				<header>
-					<h1>{{data.standard.title}}</h1>
+					<h1>{{data.post.title}}</h1>
 					<h5>
-						{{{categoryList data.standard.categories prefix="Posted in "}}}
+						{{{categoryList data.post.categories prefix="Posted in "}}}
 						{{#if author.name.first}}by {{author.name.first}}{{/if}}
 					</h5>
 				</header>
 				<div class="post">
-					{{#if data.standard.image}}<img src="{{{cloudinaryUrl data.standard.image width=750 height=450 crop='fit' }}}" class="img-responsive">{{/if}}
-					<p>{{{data.standard.content.extended}}}</p>
+					{{#if data.post.image}}<img src="{{{cloudinaryUrl data.post.image width=750 height=450 crop='fit' }}}" class="img-responsive">{{/if}}
+					<p>{{{data.post.content.extended}}}</p>
 				</div>
 			</article>
 		</div>

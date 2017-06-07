@@ -57,7 +57,7 @@ keystone.set('routes', require('./routes'));
 keystone.set('nav', {
     Independent: ['independent-posts', 'independent-post-categories'],
     Standard: ['standard-posts', 'standard-post-categories'],
-    Indy100: ['indy-posts', 'indy-post-categories'],
+    Indy: ['indy-posts', 'indy-post-categories'],
     // posts: ['posts', 'post-categories'],
     // galleries: 'galleries',
     // enquiries: 'enquiries',

@@ -6,36 +6,36 @@ exports = module.exports = function(req, res) {
     var locals = res.locals;
 
     // Set locals
-    locals.section = 'blog';
+    locals.section = 'standardhub';
     locals.filters = {
-        standard: req.params.standard,
+        post: req.params.post,
     };
     locals.data = {
-        standards: [],
+        posts: [],
     };
 
-    // Load the current standard
+    // Load the current post
     view.on('init', function(next) {
 
         var q = keystone.list('StandardPost').model.findOne({
             state: 'published',
-            slug: locals.filters.standard,
+            slug: locals.filters.post,
         }).populate('author categories');
 
         q.exec(function(err, result) {
-            locals.data.standard = result;
+            locals.data.post = result;
             next(err);
         });
 
     });
 
-    // Load other standards
+    // Load other posts
     view.on('init', function(next) {
 
         var q = keystone.list('StandardPost').model.find().where('state', 'published').sort('-publishedDate').populate('author').limit('4');
 
         q.exec(function(err, results) {
-            locals.data.standards = results;
+            locals.data.posts = results;
             next(err);
         });
 

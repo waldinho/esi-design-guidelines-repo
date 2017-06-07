@@ -6,36 +6,36 @@ exports = module.exports = function(req, res) {
     var locals = res.locals;
 
     // Set locals
-    locals.section = 'blog';
+    locals.section = 'indyhub';
     locals.filters = {
-        indy: req.params.indy,
+        post: req.params.post,
     };
     locals.data = {
-        indys: [],
+        posts: [],
     };
 
-    // Load the current indy
+    // Load the current post
     view.on('init', function(next) {
 
         var q = keystone.list('IndyPost').model.findOne({
             state: 'published',
-            slug: locals.filters.indy,
+            slug: locals.filters.post,
         }).populate('author categories');
 
         q.exec(function(err, result) {
-            locals.data.indy = result;
+            locals.data.post = result;
             next(err);
         });
 
     });
 
-    // Load other indys
+    // Load other posts
     view.on('init', function(next) {
 
         var q = keystone.list('IndyPost').model.find().where('state', 'published').sort('-publishedDate').populate('author').limit('4');
 
         q.exec(function(err, results) {
-            locals.data.indys = results;
+            locals.data.posts = results;
             next(err);
         });
 
