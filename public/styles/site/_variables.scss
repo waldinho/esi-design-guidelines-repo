@@ -20,6 +20,11 @@ body {
     width: 100%
 }
 
+h2,
+.h2 {
+    font-size: 22px;
+}
+
 .container .jumbotron,
 .container-fluid .jumbotron {
     border-radius: 0px;
@@ -133,6 +138,11 @@ body {
 .underline {
     border-bottom: 1px dotted #999;
     padding-bottom: 20px;
+}
+
+pre {
+    background: #333 !important;
+    border: none !important;
 }
 
 @media (min-width: 768px) {
