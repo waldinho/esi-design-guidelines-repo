@@ -20,3 +20,7 @@ routes(app);
 app.listen(port);
 
 console.log('RESTful API server port: ' + port);
+
+app.use(function(req, res) {
+    res.status(404).send({ url: req.originalUrl + ' not found' })
+});

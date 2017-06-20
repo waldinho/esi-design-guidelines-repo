@@ -43,7 +43,6 @@ exports.update_a_esi = function(req, res) {
 
 exports.delete_a_esi = function(req, res) {
 
-
     Esi.remove({
         _id: req.params.esiId
     }, function(err, esi) {
