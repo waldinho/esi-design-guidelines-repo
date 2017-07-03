@@ -5622,7 +5622,8 @@ button.close {
   margin-right: auto; }
 
 .pull-right {
-  float: right !important; }
+  float: right !important;
+  max-width: 160px; }
 
 .pull-left {
   float: left !important; }
