@@ -93,10 +93,16 @@ h2,
     padding-right: 0px;
 }
 
+.container-upper {
+    margin-right: auto;
+    margin-left: auto;
+    padding: 100px 0 0 30px;
+}
+
 .container-inner {
     margin-right: auto;
     margin-left: auto;
-    padding: 40px 0 0 60px;
+    padding: 30px 0 0 30px;
 }
 
 .btn-lg,
@@ -129,6 +135,8 @@ h2,
 .list-group-item:first-child {
     margin-bottom: 0;
     border-radius: 0px;
+    background-color: #333333;
+    border-color: #333333;
 }
 
 .pagination {

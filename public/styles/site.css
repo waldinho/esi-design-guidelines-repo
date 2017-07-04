@@ -3949,7 +3949,10 @@ tbody.collapse.in {
 
 .navbar-default {
   background-color: #f8f8f8;
-  border-color: #e7e7e7; }
+  border-color: #e7e7e7;
+  position: fixed;
+  width: 100%;
+  z-index: 1; }
   .navbar-default .navbar-brand {
     color: #777; }
     .navbar-default .navbar-brand:hover, .navbar-default .navbar-brand:focus {
@@ -5889,10 +5892,15 @@ h2,
   padding-left: 0px;
   padding-right: 0px; }
 
+.container-upper {
+  margin-right: auto;
+  margin-left: auto;
+  padding: 100px 0 0 30px; }
+
 .container-inner {
   margin-right: auto;
   margin-left: auto;
-  padding: 40px 0 0 60px; }
+  padding: 30px 0 0 30px; }
 
 .btn-lg, .btn-group-lg > .btn,
 .btn-group-lg > .btn {
@@ -5919,7 +5927,9 @@ h2,
 
 .list-group-item:first-child {
   margin-bottom: 0;
-  border-radius: 0px; }
+  border-radius: 0px;
+  background-color: #333333;
+  border-color: #333333; }
 
 .pagination {
   margin: 60px 0 20px 0; }
