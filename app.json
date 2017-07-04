@@ -1,0 +1,26 @@
+{
+  "name": "esi-design-guidelines-repo",
+  "scripts": {
+  },
+  "env": {
+    "CLOUDINARY_URL": {
+      "required": true
+    },
+    "COOKIE_SECRET": {
+      "required": true
+    },
+    "MONGODB_URI": {
+      "required": true
+    }
+  },
+  "formation": {
+  },
+  "addons": [
+    "mongolab"
+  ],
+  "buildpacks": [
+    {
+      "url": "heroku/nodejs"
+    }
+  ]
+}
