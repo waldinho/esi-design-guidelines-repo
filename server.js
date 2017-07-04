@@ -7,7 +7,7 @@ var express = require('express'),
 
 mongoose.Promise = global.Promise;
 // mongoose.connect('mongodb://localhost/esi-design-guidelines');
-mongoose.connect('mongodb://ds149132.mlab.com:49132/heroku_fs5pktd');
+mongoose.connect('mongodb://admin:abc123@ds149132.mlab.com:49132/heroku_fs5pktd');
 
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
