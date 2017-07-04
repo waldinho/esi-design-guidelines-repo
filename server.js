@@ -6,8 +6,8 @@ var express = require('express'),
     bodyParser = require('body-parser');
 
 mongoose.Promise = global.Promise;
-mongoose.connect('mongodb://localhost/esi-design-guidelines');
-
+// mongoose.connect('mongodb://localhost/esi-design-guidelines');
+mongoose.connect('mongodb://ds149132.mlab.com:49132/heroku_fs5pktd');
 
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
